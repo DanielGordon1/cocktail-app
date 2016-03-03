@@ -5,7 +5,9 @@
 
 <ul>
 <% @cocktail.doses.each do |dose| %>
-<li><%= dose.description %></li>
+<li><%=  dose.description %>    <%= Ingredient.find(dose.ingredient_id).name %></li>
+
+
 <% end %>
 </ul>
 <br>
