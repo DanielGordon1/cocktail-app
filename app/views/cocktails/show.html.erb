@@ -1,2 +1,11 @@
-<h1>Cocktails#show</h1>
-<p>Find me in app/views/cocktails/show.html.erb</p>
+<div class='container text-center'>
+<h1>You selected: <%= @cocktail.name %></h1>
+
+<button type="button"><%= link_to "Add a new ingredient to this cocktail", new_cocktail_dose_path(@cocktail) %></button>
+
+<ul>
+<% @cocktail.doses.each do |dose| %>
+<li><%= dose.description %></li>
+<% end %>
+</ul>
+<br>

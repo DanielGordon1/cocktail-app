@@ -21,10 +21,8 @@
     <% @cocktails.each do |cocktail| %>
     <tr>
       <td><h3><%= cocktail.id %> </h3></td>
-      <td><h3><%= link_to cocktail.name, restaurant_path(cocktail) %></h3></td>
+      <td><h3><%= link_to cocktail.name, cocktail_path(cocktail) %></h3></td>
       <td><p><%= cocktail.ingredients%></p></td>
-      <td><button type="button"><%= link_to "Edit this cocktail", edit_restaurant_path(cocktail) %></button></td>
-      <td><button type="button"><%= link_to "Delete this cocktail", restaurant_path(cocktail), method: :delete %></button></td>
       <% end %>
     </tr>
   </table>

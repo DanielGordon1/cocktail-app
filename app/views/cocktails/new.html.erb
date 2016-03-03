@@ -1,5 +1,6 @@
 <h1> Welcome to the Cocktail Creator </h1>
 <br>
+<div class="text-center">
 <%= form_for(@cocktail) do |f| %>
   <%= f.text_field :name %>
   <%= f.label :name %>
@@ -13,6 +14,7 @@
   <%= f.submit %>
 <% end %>
 <br>
+</div>
 <form action="/cocktails">
     <input type="submit" value="Go back to the mainpage">
 </form>
