@@ -1,1 +1,15 @@
 // Your footer style
+footer {
+  background: #1d1d1d;
+  padding: 30px 0 40px;
+  font-size: 13px;
+}
+footer div[class*="col-"] {
+  text-align: center;
+}
+p.copyright {
+  margin-top: 20px;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+}

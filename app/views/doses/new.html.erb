@@ -1,13 +1,20 @@
-<h1>Doses#new</h1>
-<p>Find me in app/views/doses/new.html.erb</p>
-
-<h1> Add a new Ingredient to <%= @cocktail.name %></h1>
+<div class='text-center'>
+  <h1>Doses</h1>
+  <h1> Add a new Ingredient to <%= @cocktail.name %></h1>
+</div>
 
 
 <%= simple_form_for [:cocktail, @dose] do |f| %>
-<%=  f.input :description %>
-<%= f.collection_select(:ingredient_id, @available_ingredients, :id, :name) %>
+<%= f.error_notification %>
+
+<%= f.input :description %>
+<%= f.input :ingredient_id, collection: @available_ingredients%>
 <%= f.submit  %>
 <% end %>
-
-<%= link_to 'Back to Cocktail', cocktail_path(@cocktail) %>
+<div class="text-center">
+  <button type="button" class="btn btn-default"><%= link_to 'Back to Cocktail', cocktail_path(@cocktail) %></button>
+</div>
+<br>
+<div class="text-center">
+  <button type="button" class="btn btn-default"><%= link_to 'Back to Index', cocktails_path %></button>
+</div>

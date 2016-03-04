@@ -1,20 +1,18 @@
+<div class="text-center padded">
 <h1> Welcome to the Cocktail Creator </h1>
 <br>
-<div class="text-center">
-<%= form_for(@cocktail) do |f| %>
+  <%= form_for(@cocktail) do |f| %>
+  <br>
   <%= f.text_field :name %>
+  <br>
   <%= f.label :name %>
-<br>
-  <%= f.text_field :ingredients %>
-  <%= f.label :ingredients %>
-<br>
-  <%= f.text_field :doses %>
-  <%= f.label :doses %>
-<br>
+  <br>
   <%= f.submit %>
-<% end %>
-<br>
+  <% end %>
+  <br>
 </div>
-<form action="/cocktails">
-    <input type="submit" value="Go back to the mainpage">
-</form>
+<div class='padded'>
+</div>
+<div class="text-center padded">
+  <button type="button" class="btn btn-default"><%= link_to 'Back to Index', cocktails_path %></button>
+</div>

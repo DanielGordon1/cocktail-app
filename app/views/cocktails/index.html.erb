@@ -1,29 +1,30 @@
 
-<div class="banner">
-  <div class='container text-center padded'> <h1>Cocktails Index</h1>
-    <br>
-    <br>
-    <form action="/cocktails/new">
-      <input type="submit" value="Create a cocktail">
-    </form>
-  </div> 
+<div class="banner" style="background-image: url('http://www.patricknagtegaal.nl/wordpress/wp-content/uploads/2012/11/cocktails-4.jpg');">
+  <div class='container text-center padded'>    
+    <div class="banner-content">
+      <h1>Cocktails Index</h1>
+      <div class="text-center">
+        <button type="button" class="btn btn-default"><%= link_to 'Create a cocktail', new_cocktail_path %></button>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class= 'container'>
-  <table class='table'>
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Ingredients</th>
-    </tr>
-
-
+</div> 
+</div>
+</div>
+<div class= 'container padded'>
+  <div class="row">
     <% @cocktails.each do |cocktail| %>
-    <tr>
-      <td><h3><%= cocktail.id %> </h3></td>
-      <td><h3><%= link_to cocktail.name, cocktail_path(cocktail) %></h3></td>
-      <td><p><%= cocktail.ingredients%></p></td>
-      <% end %>
-    </tr>
-  </table>
+    <div class="col-xs-12 col-sm-6 col-xs-4">
+      <div class="card" style="background-image: url(http://www.letsgobrazil.nl/wp-content/uploads/2012/09/Caipirinha.jpg);">
+        <div class="card-category">
+          <%= cocktail.id %>
+          <%= link_to cocktail.name, cocktail_path(cocktail) %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
 </div>
+
